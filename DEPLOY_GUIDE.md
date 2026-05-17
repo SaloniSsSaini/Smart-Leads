@@ -1,5 +1,7 @@
 # Deploy Guide — Frontend only (Demo Mode)
 
+**Live demo:** [https://smart-leads-blue.vercel.app/](https://smart-leads-blue.vercel.app/)
+
 **Recommended for portfolio / interview:** deploy only the frontend. The app runs fully in the browser with sample data — no Render/Railway backend.
 
 ---

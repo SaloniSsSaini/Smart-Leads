@@ -2,6 +2,8 @@
 
 A **production-style Lead Management CRM** built as a multi-tenant SaaS application. Manage leads, teams, pipelines, and billing in one place — with role-based access, real-time updates, and enterprise-ready patterns.
 
+**Live demo:** [https://smart-leads-blue.vercel.app/](https://smart-leads-blue.vercel.app/)
+
 ![CI](https://github.com/your-org/smart-leads-dashboard/actions/workflows/ci.yml/badge.svg)
 
 ---
@@ -40,11 +42,12 @@ The project demonstrates:
 - **CI/CD** with Jest unit tests and Playwright E2E
 - **Docker** for local and production-like runs
 
-| URL (local) | Purpose |
-|-------------|---------|
-| http://localhost:5173 | Web application |
-| http://localhost:5000/api/docs | Swagger API documentation |
-| http://localhost:5000/api/health | Health check |
+| URL | Purpose |
+|-----|---------|
+| [https://smart-leads-blue.vercel.app/](https://smart-leads-blue.vercel.app/) | **Live demo** (frontend + mock data) |
+| http://localhost:5173 | Web application (local) |
+| http://localhost:5000/api/docs | Swagger API documentation (local backend) |
+| http://localhost:5000/api/health | Health check (local backend) |
 
 ---
 
@@ -318,6 +321,8 @@ Then open http://localhost:5173.
 
 ## Demo accounts
 
+Use these on the [live demo](https://smart-leads-blue.vercel.app/) or after running locally / with seed data:
+
 | Email | Password | Role | What you can do |
 |-------|----------|------|-----------------|
 | `admin@smartleads.com` | `password123` | **Admin** | Full access: all leads, team, audit, webhooks, billing, archive/restore |
@@ -497,7 +502,9 @@ On every push/PR to `main` or `master`:
 
 ## Deployment
 
-**Live demo (no backend):** see [DEPLOY_GUIDE.md](./DEPLOY_GUIDE.md) — deploy `client/` to Vercel with `VITE_DEMO_MODE=true`.
+**Live demo:** [https://smart-leads-blue.vercel.app/](https://smart-leads-blue.vercel.app/) — hosted on Vercel with `VITE_DEMO_MODE=true` (no backend required).
+
+See [DEPLOY_GUIDE.md](./DEPLOY_GUIDE.md) to deploy your own copy.
 
 **Full stack (optional):** use `render.yaml` for API + MongoDB Atlas.
 
