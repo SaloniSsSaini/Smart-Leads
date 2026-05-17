@@ -497,6 +497,9 @@ On every push/PR to `main` or `master`:
 
 ## Deployment
 
+**Step-by-step (Hindi):** see [DEPLOY_GUIDE.md](./DEPLOY_GUIDE.md)  
+**Render one-click:** push repo and use root `render.yaml` (Blueprint).
+
 Recommended production setup:
 
 | Component | Platform | Notes |

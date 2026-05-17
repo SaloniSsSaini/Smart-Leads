@@ -12,8 +12,9 @@ const start = async (): Promise<void> => {
   const httpServer = http.createServer(app);
   initSocket(httpServer);
 
-  httpServer.listen(env.port, () => {
-    console.log(`Server running on port ${env.port}`);
+  const host = '0.0.0.0';
+  httpServer.listen(env.port, host, () => {
+    console.log(`Server running on http://${host}:${env.port}`);
     console.log(`Swagger docs: http://localhost:${env.port}/api/docs`);
     console.log(`WebSocket enabled`);
   });

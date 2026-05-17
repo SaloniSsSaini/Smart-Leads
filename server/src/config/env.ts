@@ -9,7 +9,22 @@ const envSchema = z.object({
   MONGO_URI: z.string().min(1, 'MONGO_URI is required'),
   JWT_SECRET: z.string().min(8, 'JWT_SECRET must be at least 8 characters'),
   JWT_EXPIRES_IN: z.string().default('7d'),
-  CLIENT_URL: z.string().url().default('http://localhost:5173'),
+  CLIENT_URL: z
+    .string()
+    .min(1)
+    .default('http://localhost:5173')
+    .refine(
+      (val) =>
+        val.split(',').every((url) => {
+          try {
+            new URL(url.trim());
+            return true;
+          } catch {
+            return false;
+          }
+        }),
+      { message: 'CLIENT_URL must be one or more valid URLs (comma-separated)' }
+    ),
   SMTP_HOST: z.string().optional(),
   SMTP_PORT: z.string().optional(),
   SMTP_USER: z.string().optional(),
@@ -27,6 +42,7 @@ if (!parsed.success) {
 
 export const env = {
   ...parsed.data,
-  port: Number(parsed.data.PORT),
+  port: Number(process.env.PORT || parsed.data.PORT),
+  clientUrls: parsed.data.CLIENT_URL.split(',').map((u) => u.trim()),
   skipEmailVerification: parsed.data.SKIP_EMAIL_VERIFICATION === 'true',
 };

@@ -1,0 +1,23 @@
+# Render Blueprint — import this repo on https://dashboard.render.com/blueprints
+services:
+  - type: web
+    name: smart-leads-api
+    runtime: node
+    rootDir: server
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: SKIP_EMAIL_VERIFICATION
+        value: "true"
+      - key: MONGO_URI
+        sync: false
+      - key: CLIENT_URL
+        sync: false
