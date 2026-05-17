@@ -10,6 +10,7 @@ import { Input } from '../../../components/ui/Input';
 import { Button } from '../../../components/ui/Button';
 import { authApi } from '../services/authApi';
 import { useAuth } from '../../../app/authContext';
+import { isDemoMode, DEMO_LOGIN_HINT } from '../../../lib/demo';
 
 const schema = z.object({
   email: z.string().email(),
@@ -45,6 +46,13 @@ export const LoginForm = () => {
 
   return (
     <form onSubmit={handleSubmit((d) => mutation.mutate(d))} className="space-y-4">
+      {isDemoMode && (
+        <div className="rounded-lg border border-indigo-200 bg-indigo-50 p-3 text-xs text-indigo-800 dark:border-indigo-800 dark:bg-indigo-950/40 dark:text-indigo-200">
+          <p className="font-semibold">Demo accounts</p>
+          <p className="mt-1 font-mono">Admin: {DEMO_LOGIN_HINT.admin.email} / {DEMO_LOGIN_HINT.admin.password}</p>
+          <p className="font-mono">Sales: {DEMO_LOGIN_HINT.sales.email} / {DEMO_LOGIN_HINT.sales.password}</p>
+        </div>
+      )}
       <Input label={t('auth.email')} type="email" error={errors.email?.message} {...register('email')} />
       <Input label={t('auth.password')} type="password" error={errors.password?.message} {...register('password')} />
       {needs2FA && (

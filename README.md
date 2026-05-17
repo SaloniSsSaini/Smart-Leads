@@ -497,8 +497,9 @@ On every push/PR to `main` or `master`:
 
 ## Deployment
 
-**Step-by-step (Hindi):** see [DEPLOY_GUIDE.md](./DEPLOY_GUIDE.md)  
-**Render one-click:** push repo and use root `render.yaml` (Blueprint).
+**Live demo (no backend):** see [DEPLOY_GUIDE.md](./DEPLOY_GUIDE.md) — deploy `client/` to Vercel with `VITE_DEMO_MODE=true`.
+
+**Full stack (optional):** use `render.yaml` for API + MongoDB Atlas.
 
 Recommended production setup:
 

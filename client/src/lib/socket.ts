@@ -1,8 +1,11 @@
 import { io, Socket } from 'socket.io-client';
+import { isDemoMode } from './demo';
 
 let socket: Socket | null = null;
 
-export const connectSocket = (token: string): Socket => {
+export const connectSocket = (token: string): Socket | null => {
+  if (isDemoMode) return null;
+
   if (socket?.connected) return socket;
 
   const url = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:5000';

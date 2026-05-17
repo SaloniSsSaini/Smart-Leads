@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Sidebar } from './Sidebar';
 import { OnboardingBanner } from '../feedback/OnboardingBanner';
+import { DemoBanner } from '../feedback/DemoBanner';
 import { CommandPalette } from '../CommandPalette';
 
 export const AppLayout = () => {
@@ -17,6 +18,7 @@ export const AppLayout = () => {
       )}
       <main className="flex-1 overflow-y-auto p-4 lg:p-8">
         <CommandPalette />
+        <DemoBanner />
         <OnboardingBanner />
         <Outlet context={{ openSidebar: () => setSidebarOpen(true) }} />
       </main>
