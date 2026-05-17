@@ -1,0 +1,82 @@
+{
+  "brand": "Smart Leads",
+  "tagline": "CRM for modern sales teams",
+  "nav": {
+    "dashboard": "Dashboard",
+    "leads": "Leads",
+    "kanban": "Kanban",
+    "team": "Team",
+    "billing": "Billing",
+    "audit": "Audit log",
+    "settings": "Settings",
+    "logout": "Logout",
+    "darkMode": "Dark mode",
+    "lightMode": "Light mode"
+  },
+  "landing": {
+    "heroTitle": "Turn leads into revenue, smarter",
+    "heroSubtitle": "Smart Leads Dashboard helps sales teams capture, filter, and close deals with real-time insights and enterprise-grade security.",
+    "getStarted": "Get started free",
+    "signIn": "Sign in",
+    "featuresTitle": "Everything you need to manage leads",
+    "howTitle": "How it works",
+    "step1": "Sign up & verify email",
+    "step2": "Add and organize leads",
+    "step3": "Track, filter & export",
+    "techTitle": "Built with modern stack",
+    "footer": "© {{year}} Smart Leads. All rights reserved."
+  },
+  "auth": {
+    "login": "Sign in",
+    "register": "Create account",
+    "email": "Email",
+    "password": "Password",
+    "name": "Full name",
+    "orgName": "Organization name",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "No account?",
+    "hasAccount": "Already have an account?",
+    "verifyTitle": "Verify your email",
+    "verifySuccess": "Email verified! You can sign in now.",
+    "forgotTitle": "Reset password",
+    "resetTitle": "Set new password",
+    "sendReset": "Send reset link",
+    "demo": "Demo: admin@smartleads.com / password123"
+  },
+  "leads": {
+    "title": "Leads",
+    "subtitle": "Manage your sales pipeline",
+    "addLead": "Add lead",
+    "export": "Export CSV",
+    "search": "Search name or email...",
+    "noLeads": "No leads found",
+    "createFirst": "Create your first lead"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Overview of your pipeline"
+  },
+  "billing": {
+    "title": "Billing",
+    "subtitle": "Manage your subscription",
+    "currentPlan": "Current plan",
+    "upgrade": "Upgrade"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "markAllRead": "Mark all read",
+    "empty": "No notifications"
+  },
+  "onboarding": {
+    "tip": "Tip: Use filters + debounced search, then export matching leads to CSV.",
+    "dismiss": "Got it"
+  },
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "retry": "Try again",
+    "switchOrg": "Switch organization"
+  }
+}
